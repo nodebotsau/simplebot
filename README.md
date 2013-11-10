@@ -1,26 +1,27 @@
-# SimpleBot for NBD Melbourne.
+# SimpleBot.
 
 ## Overview
 
 This is one of the most simple robots you can make. Features are:
 
-* quick to put together (about 30-40 mins)
-* very hackable (it's built with cardboard so very easily modifiable) 
-* can move pretty fast (at full tilt it will go about a metre a second)
-* very extendable (much of the magic happens in code and sensors etc can be easily fed in)
-* Cheap (costs about $90 which is very cheap for your first robot)
+* quick to put together (about an hour)
+* very hackable (it can be built with cardboard or laser cut so very easily modifiable)
+* can move pretty fast (at full tilt it will go about half a metre a second - faster with more juice for the servos!)
+* very extendable (much of the magic happens in code and sensors can be easily fed in)
+* Cheap (costs about $100 which is very cheap for your first robot)
 
-This bot is an adaptation of the excellent [SumoBot Jr](https://github.com/makenai/sumobot-jr/) made by @makenai but doesn't require laser cutting wood or plastic.
+This bot is an adaptation of the excellent [SumoBot Jr](https://github.com/makenai/sumobot-jr/) made by [Paweł Szymczykowski](http://twitter.com/makenai) but doesn't require laser cutting wood or plastic though you can if you want something a bit more long lasting.
 
 ## Capabilities
 
 This is a tethered robot, meaning it stays connected to your computer via a USB cable. This means you can get your computer to do all the hard work to provide interface control (say a web page or an app) and processing (computer vision if you attached a webcam for example!).
 
-This is the first prototype, put together in about 30 minutes one evening.
+This is the very first prototype, put together in about 30 minutes one evening.
 
 ![SimpleBot](img/simplebot-proto.jpg)
 
-Once done you can reuse all of the components to make a bigger, badder, faster robot and switch the cardboard for more durable elements such as laser cut wood or plastic if you desire.
+
+Once done you can reuse all of the components to make a bigger, badder, faster robot and switch the cardboard for more durable elements such as laser cut wood or plastic if you desire. We've even supplied the SVG and DXF files to do exactly that.
 
 ## Materials needed
 
