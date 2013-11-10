@@ -5,7 +5,7 @@
 var five = require("johnny-five");
 var keypress = require('keypress');
 
-var STOPVAL = 88;
+var STOPVAL = 91;
 
 keypress(process.stdin);
 
@@ -49,15 +49,15 @@ board.on("ready", function() {
     } else if ( key.name == 'left' ) {
 
       console.log('Left');
-      left_wheel.cw();
-      right_wheel.cw();      
+      left_wheel.ccw();
+      right_wheel.ccw();      
 
 
     } else if ( key.name == 'right' ) {
 
       console.log('Right');
-      left_wheel.ccw();
-      right_wheel.ccw();
+      left_wheel.cw();
+      right_wheel.cw();
 
     } else if ( key.name == 'space' ) {
 
