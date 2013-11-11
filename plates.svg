@@ -11,7 +11,7 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="96"
    inkscape:export-xdpi="96"
-   inkscape:export-filename="/home/fishera/dev/nodebotsau/base v2.1.png"
+   inkscape:export-filename="/home/fishera/dev/nbdmelb/nbdmelb/simplebot/plates.png"
    sodipodi:docname="plates.svg"
    inkscape:version="0.48.3.1 r9886"
    version="1.1"
@@ -27,7 +27,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.0300636"
      inkscape:cx="277.79226"
-     inkscape:cy="537.07257"
+     inkscape:cy="614.73767"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="true"
@@ -69,7 +69,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
