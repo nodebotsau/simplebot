@@ -1,11 +1,12 @@
 // =======================
-// Sumobot Jr demo program
+// Derived from the work done by @makenai on the
+// SumoBot Jr
 // =======================
 
 var five = require("johnny-five");
 var keypress = require('keypress');
 
-var STOPVAL = 91;
+var STOPVAL = 90;
 
 keypress(process.stdin);
 
@@ -13,7 +14,7 @@ var board = new five.Board();
 
 board.on("ready", function() {
 
-  console.log("Welcome to Sumobot Jr!")
+  console.log("Welcome to SimpleBot!")
   console.log("Control the bot with the arrow keys, and SPACE to stop.")
 
   var left_wheel  = new five.Servo({ pin:  9, type: 'continuous' }).move(STOPVAL);
