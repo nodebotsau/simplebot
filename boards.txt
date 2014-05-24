@@ -1,0 +1,43 @@
+# Freetronics LeoStick board profile v3.0
+#
+# Incorporates profiles for LeoStick V1.0 & V2.0
+#
+# Tested with Arduino 1.0, 1.0.2 and 1.0.4
+#
+##############################################################
+leostick.name=Freetronics LeoStick V1.0
+leostick.upload.protocol=arduino
+leostick.upload.maximum_size=28672
+leostick.upload.speed=1200
+leostick.bootloader.low_fuses=0xde
+leostick.bootloader.high_fuses=0xd8
+leostick.bootloader.extended_fuses=0xcb
+leostick.bootloader.path=diskloader
+leostick.bootloader.file=DiskLoader-LeoStick.hex
+leostick.bootloader.unlock_bits=0x3F
+leostick.bootloader.lock_bits=0x2F
+leostick.build.mcu=atmega32u4
+leostick.build.f_cpu=16000000L
+leostick.build.vid=0x26BA
+leostick.build.pid=0x8002
+leostick.build.core=leostickv1
+leostick.build.variant=arduino:leonardo
+##############################################################
+leostickv2.name=Freetronics LeoStick V2.0
+leostickv2.upload.protocol=avr109
+leostickv2.upload.maximum_size=28672
+leostickv2.upload.speed=57600
+leostickv2.upload.disable_flushing=true
+leostickv2.bootloader.low_fuses=0xff
+leostickv2.bootloader.high_fuses=0xd8
+leostickv2.bootloader.extended_fuses=0xcb
+leostickv2.bootloader.path=caterina
+leostickv2.bootloader.file=Caterina-LeoStick.hex
+leostickv2.bootloader.unlock_bits=0x3F
+leostickv2.bootloader.lock_bits=0x2F
+leostickv2.build.mcu=atmega32u4
+leostickv2.build.f_cpu=16000000L
+leostickv2.build.vid=0x26BA
+leostickv2.build.pid=0x8002
+leostickv2.build.core=arduino:arduino
+leostickv2.build.variant=arduino:leonardo
