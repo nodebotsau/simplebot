@@ -17,9 +17,8 @@ board.on("ready", function() {
   console.log("Welcome to SimpleBot!")
   console.log("Control the bot with the arrow keys, and SPACE to stop.")
 
-  var left_wheel  = new five.Servo({ pin:  9, type: 'continuous' }).move(STOPVAL);
-  var right_wheel = new five.Servo({ pin: 10, type: 'continuous'  }).move(STOPVAL);
-
+  var left_wheel  = new five.Servo({ pin:  9, type: 'continuous' }).to(STOPVAL);
+  var right_wheel = new five.Servo({ pin: 10, type: 'continuous'  }).to(STOPVAL);
 
   process.stdin.resume(); 
   process.stdin.setEncoding('utf8'); 
@@ -28,7 +27,6 @@ board.on("ready", function() {
   process.stdin.on('keypress', function (ch, key) {
     
     if ( !key ) return;
-
 
     if ( key.name == 'q' ) {
 
@@ -63,13 +61,9 @@ board.on("ready", function() {
     } else if ( key.name == 'space' ) {
 
       console.log('Stopping');
-      left_wheel.move(STOPVAL);
-      right_wheel.move(STOPVAL);
+      left_wheel.to(STOPVAL);
+      right_wheel.to(STOPVAL);
 
     }
-
-
   });
-
-
 });
