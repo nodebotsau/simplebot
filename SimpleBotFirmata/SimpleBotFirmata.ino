@@ -627,8 +627,12 @@ void systemResetCallback()
   */
 }
 
+
 void setup() 
 {
+
+  while (!Serial) {};
+
   Firmata.setFirmwareVersion(FIRMATA_MAJOR_VERSION, FIRMATA_MINOR_VERSION);
 
   Firmata.attach(ANALOG_MESSAGE, analogWriteCallback);
