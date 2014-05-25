@@ -72,3 +72,21 @@ Compile and upload it to your arduino.
 
 Wire up your SimpleBot and then you have an examples folder with ping.js and simplebot.js which you can use as a base for everything else.
 
+# Driving over Bluetooth
+
+You can use bluetooth to drive the simplebot but it's not for the faint of heart. Get a bluetooth module and configire it like you do on [this wiki entry in J5](https://github.com/rwaldron/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes). This is a mandatory.
+
+Also note that this *will* work with a leostick but you get a lot of timing errors so be patient, or switch to an Uno or something.
+
+Once you've got your bluetooth set up, you should see it in your serial ports.
+
+Simply go:
+
+    node examples/simplebot.js /dev/tty.SERIALPORT
+
+Changing the path at the end to whatever yours is. You should now be able to drive using wireless over bluetooth. 
+
+If you get errors about pinMode and undefined issues that's basically a timing issue or a dropped backet over bluetooth. Told you this wasn't for the faint of heart. Try again and see what happens.
+
+If you happen to have a playstation controller then you can use the sb-controller.js example to drive your simplebot using a console controller which is pretty cool.
+

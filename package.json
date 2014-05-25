@@ -1,6 +1,6 @@
 {
   "name": "simplebot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple robotics platform designed to be used and built on a NodeBots Day event",
   "main": "simplebot.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "url": "https://github.com/ajfisher/nbdau/issues"
   },
   "dependencies": {
-    "johnny-five": "~0.7.5",
+    "johnny-five": "^0.7.43",
     "keypress": "~0.2.1"
   }
 }

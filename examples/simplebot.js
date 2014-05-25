@@ -7,7 +7,7 @@ var five = require("johnny-five");
 var keypress = require('keypress');
 
 var STOPVAL = 90;
-var RSTOPVAL = 89;
+var RSTOPVAL = 88;
 var LSTOPVAL = 89;
 
 var port = process.argv[2] || "";
