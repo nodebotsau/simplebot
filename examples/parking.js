@@ -18,12 +18,9 @@ board.on("ready", function() {
         // now we do a callback on the interval of the centimetres thus
         // shorter centimetres means less interval before calling the tone command
         clearInterval(intervalID);
-        if (this.cm > 4) {
-            console.log("setting interval");
+        if (this.cm > 4) {  // this is arbitrary to stop the conflicts with tone.
             intervalID = setInterval(function() {
-
                 piezo.tone("e", "1");
-
             }, Math.floor(this.cm));
         }
     });
