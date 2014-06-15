@@ -1,0 +1,39 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=simplebotpcb
+*Date=13:14:30
+*CreatedBy=Fritzing 0.8.7b.01.24.1bf5
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;;8.92851;-22.5876;-90;Bottom;3
+2;;;8.92851;-20.0476;-90;Bottom;2
+3;;;14.5462;-3.13491;0;Bottom;Hole1
+4;;;16.5485;-7.34773;0;Bottom;Via2
+5;;THT;56.4548;-36.5577;0;Bottom;BT (RX->)
+6;;;8.92851;-25.1277;-90;Bottom;4
+7;;;21.6284;-12.3978;0;Bottom;Via3
+8;;;3.76273;-6.67791;0;Bottom;TXT2
+9;;;61.1233;-17.277;0;Bottom;Hole2
+10;;;24.1672;-33.2086;0;Bottom;Hole6
+11;;;19.0885;-9.88773;0;Bottom;Via1
+12;;THT;11.4685;-37.3677;0;Bottom;WiFI (1->)
+13;3V;;3.8485;-11.1576;0;Bottom;Servo Batt
+14;;;34.5515;-26.6669;0;Bottom;Uno
+15;;;15.4759;-5.84218;0;Bottom;Via5
+16;;;8.92851;-17.5076;-90;Bottom;1
+17;;;14.1247;-21.1272;-90;Bottom;TXT1
+18;;;21.4979;-33.2086;0;Bottom;Hole5
+19;;;38.2889;-5.9503;0;Bottom;Via4
+20;;;17.2156;-3.13491;0;Bottom;Hole4
+21;;;46.9507;-12.8792;0;Bottom;TXT3
+22;;;44.4801;-17.5076;90;Bottom;Nano
+23;;THT;10.4927;-8.61763;0;Bottom;Sonic (+->)
+24;;;64.1569;-17.277;0;Bottom;Hole3
