@@ -90,3 +90,6 @@ If you get errors about pinMode and undefined issues that's basically a timing i
 
 If you happen to have a playstation controller then you can use the sb-controller.js example to drive your simplebot using a console controller which is pretty cool.
 
+# Driving using wifi
+
+You can use a simple serial wifi module to make your SimpleBot work over wireless (increased range, no BT headaches). Check out [this gist for more details](https://gist.github.com/ajfisher/1fdbcbbf96b7f2ba73cd).
