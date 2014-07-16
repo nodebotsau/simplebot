@@ -25,14 +25,15 @@ Once done you can reuse all of the components to make a bigger, badder, faster r
 
 ## Materials needed
 
-### Suppliers
 
-All of the links here are for [LittleBird Electronics](http://littlebirdelectronics.com) for the robot. There are other electronics retailers in Australia however LBE has been a big part of the maker community over the last few years, they carry a big range of components and they have excellent customer service.
+
+### Suppliers
 
 [JayCar](http://www.jaycar.com.au) provide a range of basic components but not the full range. Mostly good for basics like wire and tools.
 
 [Freetronics](http://www.freetronics.com) are a local Melbourne hardware design business. They produce some of the highest quality electronics in the world and they do it all Open Source. They even build satellites! If you're [just after an arduino](http://www.freetronics.com/collections/arduino/products/eleven#.UjuVQxIW3S0) and not the whole bot then support not just an Aussie business doing high tech but a Melbourne one too.
 
+The following links are for [LittleBird Electronics](http://littlebirdelectronics.com) for the robot parts. LBE has been a big part of the maker community over the last few years, they carry a big range of components and they have excellent customer service.
 
 * [Arduino](http://littlebirdelectronics.com/products/eleven-100-arduino-uno-compatible) $42.85 - This is the "brains" of your robot and it comes with a USB cable.
 * [4xAA Battery holder](http://littlebirdelectronics.com/products/battery-holder-4xaa-cube) $2.74 - Provides power for your motors. You'll also want 4xAA batteries. We'd recommend rechargables and we'll have some chargers on the day.
@@ -40,7 +41,12 @@ All of the links here are for [LittleBird Electronics](http://littlebirdelectron
 * [2x Continuous Rotation Servos](http://littlebirdelectronics.com/products/servo-medium-full-rotation) $15.35 x 2 - These drive the wheels. *Don't forget you need to get two of these.*
 * [Jumper wire](http://littlebirdelectronics.com/products/jumper-wires-standard-7-m-m-pack-of-30) $6.05 - Wires to connect everything together. You won't need all of these but they are handy to have when you want to extend your bot.
 
-Total price: $85.97
+Total price from LBE: $85.97
+ 
+[TronixLabs](http://tronixlabs.com/) are a Melbourne-based supplier who stock enthusiast and hobbyist electronics, robotics, single-board computers etc, and you can find equivalent parts listed [here](http://tronixlabs.com/nodebots/). 
+
+Total price from TronixLabs: $65.25
+
 
 We'll have cardboard, cable ties and other prototyping stuff available on NBD to help build your very own bot but other things you might want to bring could include:
 
