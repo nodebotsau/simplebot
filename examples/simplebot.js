@@ -7,8 +7,8 @@ var five = require("johnny-five");
 var keypress = require('keypress');
 
 var STOPVAL = 90;
-var RSTOPVAL = 88;
-var LSTOPVAL = 89;
+var RSTOPVAL = 90;
+var LSTOPVAL = 90;
 
 var port = process.argv[2] || "";
 
@@ -30,7 +30,7 @@ board.on("ready", function() {
 
     var led = new five.Led(5);
     var left_wheel  = new five.Servo({ pin:  9, type: 'continuous' }).to(LSTOPVAL);
-    var right_wheel = new five.Servo({ pin: 10, type: 'continuous'  }).to(RSTOPVAL);
+    var right_wheel = new five.Servo({ pin: 8, type: 'continuous'  }).to(RSTOPVAL);
 
     process.stdin.resume(); 
     process.stdin.setEncoding('utf8'); 
