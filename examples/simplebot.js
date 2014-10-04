@@ -7,21 +7,15 @@ var five = require("johnny-five");
 var keypress = require('keypress');
 
 var STOPVAL = 90;
-var RSTOPVAL = 90;
+var RSTOPVAL = 93;
 var LSTOPVAL = 90;
 
-var port = process.argv[2] || "";
-
 var opts = {};
-
-if (port != "") {
-    opts.port = port;
-}
+opts.port = process.argv[2] || "";
 
 keypress(process.stdin);
 
 var board = new five.Board(opts);
-//var board = new five.Board({port: "/dev/tty.FireFly-AF8A-SPP" });
 
 board.on("ready", function() {
 
@@ -48,26 +42,26 @@ board.on("ready", function() {
     } else if ( key.name == 'up' ) {
 
         console.log('Forward');
-        left_wheel.ccw();
-        right_wheel.cw();
+        left_wheel.cw();
+        right_wheel.ccw();
 
     } else if ( key.name == 'down' ) {
 
         console.log('Backward');
-        left_wheel.cw();
-        right_wheel.ccw();      
+        left_wheel.ccw();
+        right_wheel.cw();      
 
     } else if ( key.name == 'left' ) {
 
         console.log('Left');
-        left_wheel.cw();
-        right_wheel.cw();      
+        left_wheel.ccw();
+        right_wheel.ccw();      
 
     } else if ( key.name == 'right' ) {
 
         console.log('Right');
-        left_wheel.ccw();
-        right_wheel.ccw();
+        left_wheel.cw();
+        right_wheel.cw();
 
     } else if ( key.name == 'space' ) {
 
