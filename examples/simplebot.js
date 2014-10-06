@@ -22,7 +22,6 @@ board.on("ready", function() {
     console.log("Welcome to SimpleBot!")
     console.log("Control the bot with the arrow keys, and SPACE to stop.")
 
-    var led = new five.Led(5);
     var left_wheel  = new five.Servo({ pin:  9, type: 'continuous' }).to(LSTOPVAL);
     var right_wheel = new five.Servo({ pin: 8, type: 'continuous'  }).to(RSTOPVAL);
 
