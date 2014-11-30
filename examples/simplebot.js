@@ -20,8 +20,8 @@ board.on("ready", function() {
 
     console.log("Control the bot with the arrow keys, and SPACE to stop.")
 
-    var left_wheel  = new five.Servo({ pin:  9, type: 'continuous' }).to(LSTOPVAL);
-    var right_wheel = new five.Servo({ pin: 8, type: 'continuous'  }).to(RSTOPVAL);
+    var left_wheel  = new five.Servo({ pin:  9, type: 'continuous' });
+    var right_wheel = new five.Servo({ pin: 10, type: 'continuous'  });
 
     process.stdin.resume(); 
     process.stdin.setEncoding('utf8'); 
