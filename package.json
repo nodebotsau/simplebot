@@ -20,7 +20,7 @@
     "url": "https://github.com/ajfisher/nbdau/issues"
   },
   "dependencies": {
-    "johnny-five": "^0.7.56",
+    "johnny-five": "^0.8.29",
     "keypress": "~0.2.1",
     "temporal": "^0.3.8"
   }
