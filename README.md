@@ -57,17 +57,7 @@ We'll have cardboard, cable ties and other prototyping stuff available on NBD to
 
 # SETUP
 
-To setup your SimpleBot we're assuming you have Arduino and NodeJS installed already. If you're using a LeoStick arduino follow the notes immediately below. If not, skip to "flashing my arduino" below.
-
-## Set up your LeoStick
-
-You'll need to get your Arduino IDE to be able to talk to your leostick. In the leostick folder there is a file called boards.txt - copy the content of this file into the bottom of your arduino boards.txt file. Ask about or google this before you do it.
-
-Restart your arduino IDE and you should now see LeoStick v1.0 and LeoStick v2.0 in your lists of boards. Choose V2.0 to start as that's most likely what you have.
-
-Try and upload blink to your LeoStick and make sure it all works.
-
-If that works you're good to move on.
+To setup your SimpleBot we're assuming you have Arduino and NodeJS installed already. 
 
 ## Flashing my arduino
 
