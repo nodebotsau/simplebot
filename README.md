@@ -18,7 +18,7 @@ This is a tethered robot, meaning it stays connected to your computer via a USB 
 
 This is the very first prototype, put together in about 30 minutes one evening.
 
-![SimpleBot](img/simplebot-proto.jpg)
+![SimpleBot](docs/img/simplebot-proto.jpg)
 
 
 Once done you can reuse all of the components to make a bigger, badder, faster robot and switch the cardboard for more durable elements such as laser cut wood or plastic if you desire. We've even supplied the SVG and DXF files to do exactly that.
