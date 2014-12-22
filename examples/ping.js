@@ -8,7 +8,7 @@ var board = new five.Board(opts);
 board.on("ready", function() {
 
     //Create new Ping and show distance on change
-    var ping = new five.Ping(7);
+    var ping = new five.Ping(8);
 
     ping.on("change", function( err, value ) {
 
