@@ -20,7 +20,6 @@ This is the very first prototype, put together in about 30 minutes one evening.
 
 ![SimpleBot](docs/img/simplebot-proto.jpg)
 
-
 Once done you can reuse all of the components to make a bigger, badder, faster robot and switch the cardboard for more durable elements such as laser cut wood or plastic if you desire. We've even supplied the SVG and DXF files to do exactly that.
 
 ## Materials needed
@@ -59,9 +58,9 @@ We'll have cardboard, cable ties and other prototyping stuff available on NBD to
 
 To setup your SimpleBot we're assuming you have Arduino and NodeJS installed already. 
 
-## Flashing my arduino
+## Flashing the arduino
 
-Load up the simplebot/SimpleBotFirmata sketch.
+Load up the firmware/arduino/SimpleBotFirmata sketch.
 
 Compile and upload it to your arduino.
 
@@ -77,11 +76,11 @@ Breadboard:
 
 ![SimpleBot Breadboard diagram](examples/wiring/basic_wiring_bb.png)
 
-# Driving over Bluetooth
+# Examples
+
+## Driving over Bluetooth
 
 You can use bluetooth to drive the simplebot but it's not for the faint of heart. Get a bluetooth module and configure it per [this wiki entry in J5](https://github.com/rwaldron/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes). This is a mandatory.
-
-Also note that this *will* work with a leostick but you get a lot of timing errors so be patient, or switch to an Uno or something.
 
 Once you've got your bluetooth set up, you should see it in your serial ports.
 
@@ -91,10 +90,20 @@ Simply go:
 
 Changing the device path to whatever yours is. You should now be able to drive using wireless over bluetooth. 
 
-If you get errors about pinMode and undefined issues that's basically a timing issue or a dropped backet over bluetooth. Told you this wasn't for the faint of heart. Try again and see what happens.
+## Game controller
 
 If you happen to have a playstation controller then you can use the sb-controller.js example to drive your simplebot using a console controller which is pretty cool.
 
-# Driving using wifi
+## Driving using wifi
 
 You can use a simple serial wifi module to make your SimpleBot work over wireless (increased range, no BT headaches). Check out [this gist for more details](https://gist.github.com/ajfisher/1fdbcbbf96b7f2ba73cd).
+
+# LICENSE
+
+This SimpleBot repo is licensed using the MIT license for all components.
+
+Firmata implementations are modifications of [https://github.com/firmata/arduino/](Firmata for Arduino) by [https://github.com/soundanalogous](Jeff Hoefs @soundanalagous) and others and is used according to the GPL.
+
+Firmata modifications include merged components of the [https://github.com/jgautier/arduino-1/tree/pulseIn](pulseIn code) as created by [https://github.com/jgautier](Julian Gautier @jgautier).
+
+
