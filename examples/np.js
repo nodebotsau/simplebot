@@ -20,21 +20,29 @@ board.on("ready", function() {
         board: this
     });
 
-    var pos = 0;
+    var pos1 = 2;
+    var pos2 = 1;
+    var pos3 = 0;
 
     var blinker = setInterval(function() {
-        strip.pixel(pos).color("#000");
 
-        if (++pos >= strip.stripLength()) pos = 0;
-        strip.pixel(pos).color("lime");
-        //console.log(strip.pixel(pos).color());
-    }, 1000/30);
+        if (++pos1 >= strip.stripLength()) pos1 = 0;
+        strip.pixel(pos1).color("red");
 
-    /**strip.color("teal");
+        if (++pos2 >= strip.stripLength()) pos2 = 0;
+        strip.pixel(pos2).color("green");
+
+        if (++pos3 >= strip.stripLength()) pos3 = 0;
+        strip.pixel(pos3).color("blue");
+        
+        strip.show();
+    }, 1000/20);
+
+/**    strip.color("teal");
 
     var p = strip.pixel(3);
     p.color("#FF0000");
+    strip.show();**/
 
-    console.log(p.color());**/
 
 });
