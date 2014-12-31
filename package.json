@@ -2,13 +2,13 @@
   "name": "simplebot",
   "version": "0.2.0",
   "description": "A simple robotics platform designed to be used and built on a NodeBots Day event",
-  "main": "simplebot.js",
+  "main": "examples/simplebot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ajfisher/nbdau"
+    "url": "https://github.com/nodebotsau/simplebot"
   },
   "keywords": [
     "nodebots",
@@ -17,10 +17,10 @@
   "author": "Andrew Fisher",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/ajfisher/nbdau/issues"
+    "url": "https://github.com/nodebotsau/simplebot/issues"
   },
   "dependencies": {
-    "johnny-five": "^0.8.29",
+    "johnny-five": "^0.8.36",
     "keypress": "~0.2.1",
     "temporal": "^0.3.8",
     "color-string": "^0.2.4",
