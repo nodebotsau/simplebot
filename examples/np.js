@@ -26,6 +26,8 @@ board.on("ready", function() {
 
     var blinker = setInterval(function() {
 
+        strip.color("#000"); // blanks it out
+
         if (++pos1 >= strip.stripLength()) pos1 = 0;
         strip.pixel(pos1).color("red");
 
@@ -34,9 +36,9 @@ board.on("ready", function() {
 
         if (++pos3 >= strip.stripLength()) pos3 = 0;
         strip.pixel(pos3).color("blue");
-        
+
         strip.show();
-    }, 1000/20);
+    }, 1000/25);
 
 /**    strip.color("teal");
 
