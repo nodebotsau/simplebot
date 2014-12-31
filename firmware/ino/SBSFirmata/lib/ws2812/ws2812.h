@@ -16,10 +16,10 @@
 #define DEBUG true
 
 #include "Arduino.h"
-#include "Adafruit_NeoPixel.h"
+#include <Adafruit_NeoPixel.h>
 
 #define LED_PIN 6
-#define STRIP_LENGTH 4
+#define STRIP_LENGTH 44
 #define BUFLENGTH 32
 
 void ws2812_initialise();

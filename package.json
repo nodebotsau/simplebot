@@ -22,6 +22,8 @@
   "dependencies": {
     "johnny-five": "^0.8.29",
     "keypress": "~0.2.1",
-    "temporal": "^0.3.8"
+    "temporal": "^0.3.8",
+    "es6-shim": "^0.22.1",
+    "color-string": "^0.2.4"
   }
 }
