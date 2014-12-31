@@ -1,9 +1,5 @@
-
-require("es6-collections");
-
 var five = require("johnny-five");
 var pixel = require("../../lib/pixel.js");
-
 
 var opts = {};
 opts.port = process.argv[2] || "";
@@ -24,7 +20,6 @@ board.on("ready", function() {
     });
 
     var pos = 0;
-
     var colors = ["red", "green", "blue", "yellow", "cyan", "magenta", "white"];
     var current_color = 0;
 
@@ -40,5 +35,4 @@ board.on("ready", function() {
 
         strip.show();
     }, 1000/2);
-
 });
