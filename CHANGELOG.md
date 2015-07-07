@@ -1,5 +1,11 @@
 # SimpleBot project changelog
 
+## 0.3.2
+
+* Removed some old cruft and old physical files no longer needed.
+* Updated SimpleBot chassis with some mods to make simpler and no 3d printed part required.
+
+
 ## 0.3.1
 
 * Added changelog, typos, fixed old NPM url.
