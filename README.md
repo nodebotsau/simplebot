@@ -20,7 +20,15 @@ This is the very first prototype, put together in about 30 minutes one evening.
 
 ![SimpleBot](docs/img/simplebot-proto.jpg)
 
+Further iterations led to more refined designs such as this which has wifi capability.
+
+![SimpleBot MkII](docs/img/simplebot-wifi.jpg)
+
 Once done you can reuse all of the components to make a bigger, badder, faster robot and switch the cardboard for more durable elements such as laser cut wood or plastic if you desire. We've even supplied the SVG and DXF files to do exactly that.
+
+Add a raspberry pi and you get a SimplePiBot which can be made fully autonomous.
+
+![SimplePiBot](docs/img/simplepibots.jpg)
 
 ## Materials needed
 
