@@ -29,14 +29,9 @@
  * TODO: use Program Control to load stored profiles from EEPROM
  */
 
-/** MODIFIED BY AJFISHER to support the SimpleBotShield v1 **/
-
 #include <Servo.h>
 #include <Wire.h>
 #include "./Firmata.h"
-
-#include "neopixel/Adafruit_NeoPixel.h"
-#include "ws2812/ws2812.h"
 
 // move the following defines to Firmata.h?
 #define I2C_WRITE B00000000
@@ -51,7 +46,7 @@
 
 #define REGISTER_NOT_SPECIFIED -1
 
-#define PULSE_IN                0x74 // send a pulse in command
+#define PING_READ                0x75 // send a pulse in command
 
 /*==============================================================================
  * GLOBAL VARIABLES
@@ -95,26 +90,6 @@ byte detachedServos[MAX_SERVOS];
 byte detachedServoCount = 0;
 byte servoCount = 0;
 
-
-/*==============================================================================
- * CUSTOM CALLBACKS for NP processing
- *============================================================================*/
-
-void pixelCallback(char *string) {
-
-    String message = String(string);
-
-    // now we have a message, let's parse it.
-    int msg_index = message.lastIndexOf('{');
-    if (msg_index >= 0) {
-        parse_message(message, msg_index);
-    }
-    // Firmata bug: SysEx STRING_DATA handler uses malloc(), but not free()
-    // https://github.com/firmata/arduino/issues/74
-
-    //free(string);
-    string = 0;
-}
 
 /*==============================================================================
  * FUNCTIONS
@@ -603,7 +578,7 @@ void sysexCallback(byte command, byte argc, byte *argv)
       }
       Firmata.write(END_SYSEX);
       break;
-  case PULSE_IN:{
+  case PING_READ:{
       byte pulseDurationArray[4] = {
         (argv[2] & 0x7F) | ((argv[3] & 0x7F) << 7)
        ,(argv[4] & 0x7F) | ((argv[5] & 0x7F) << 7)
@@ -647,7 +622,7 @@ void sysexCallback(byte command, byte argc, byte *argv)
       responseArray[2] = (((unsigned long)duration >> 16) & 0xFF) ;
       responseArray[3] = (((unsigned long)duration >> 8) & 0xFF);
       responseArray[4] = (((unsigned long)duration & 0xFF));
-      Firmata.sendSysex(PULSE_IN,5,responseArray);
+      Firmata.sendSysex(PING_READ,5,responseArray);
       break;
     }
   }
@@ -738,13 +713,8 @@ void setup()
   Firmata.attach(START_SYSEX, sysexCallback);
   Firmata.attach(SYSTEM_RESET, systemResetCallback);
 
-  Firmata.attach(STRING_DATA, pixelCallback);
-
   Firmata.begin(57600);
   systemResetCallback();  // reset to default config
-
-  ws2812_initialise();
-
 }
 
 /*==============================================================================

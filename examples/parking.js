@@ -7,7 +7,12 @@ var five = require("johnny-five"),
 board.on("ready", function() {
 
     //Create new Ping and show distance on change
-    var ping = new five.Ping(7);
+    var ping = new five.Proximity({
+        pin: 7,
+        freq: 200,
+        controller: "HCSR04"
+    });
+
     var piezo = new five.Piezo(11); // leostick piezo
 
     var intervalID = 0;

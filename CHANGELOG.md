@@ -1,10 +1,18 @@
 # SimpleBot project changelog
 
+## 0.4
+
+* Updated all packages to latest versions
+* changed build packages to use new grunt build process to make them
+* Updated firmata to use new proximity firmata in line with J5
+* updated examples to use new `Proximity class`
+* Updated pixel for SBS to use new `node-pixel` version.
+
+
 ## 0.3.2
 
 * Removed some old cruft and old physical files no longer needed.
 * Updated SimpleBot chassis with some mods to make simpler and no 3d printed part required.
-
 
 ## 0.3.1
 

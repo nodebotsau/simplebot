@@ -19,7 +19,12 @@ board.on("ready", function() {
   // Simple directional decisions can be created
   // to turn the bot autonomously
 
-  var ping = new five.Ping(7);
+  var ping = new five.Ping({
+      pin: 7,
+      freq: 100,
+      controller: "HCSR04",
+  });
+
   console.log('Initialising Range Finder');
 
   ping.on("change", function( err, value ) {

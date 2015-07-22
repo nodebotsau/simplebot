@@ -1,5 +1,5 @@
 var five = require("johnny-five");
-var pixel = require("../../lib/pixel.js");
+var pixel = require("node-pixel");
 
 var opts = {};
 opts.port = process.argv[2] || "";
@@ -16,7 +16,8 @@ board.on("ready", function() {
     strip = new pixel.Strip({
         data: 6,
         length: 4,
-        board: this
+        board: this,
+        controller: "FIRMATA",
     });
 
     var pos = 0;
