@@ -15,15 +15,15 @@
     "robots"
   ],
   "author": "Andrew Fisher",
-  "license": "BSD",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nodebotsau/simplebot/issues"
   },
   "dependencies": {
-    "johnny-five": "^0.8.36",
-    "keypress": "~0.2.1",
-    "temporal": "^0.3.8",
-    "color-string": "^0.2.4",
-    "es6-collections": "^0.4.0"
+    "color-string": "^0.3.0",
+    "es6-collections": "^0.5.2",
+    "johnny-five": "^0.8.85",
+    "keypress": "^0.2.1",
+    "temporal": "^0.4.0"
   }
 }
