@@ -203,7 +203,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-11
+4
   0
 LAYER
   5
@@ -256,104 +256,6 @@ AcDbSymbolTableRecord
 AcDbLayerTableRecord
   2
 wheels
- 70
-0
-  6
-CONTINUOUS
-  0
-LAYER
-  5
-54
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-Arduino
- 70
-0
-  6
-CONTINUOUS
-  0
-LAYER
-  5
-55
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-Breadboard
- 70
-0
-  6
-CONTINUOUS
-  0
-LAYER
-  5
-56
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-Servos
- 70
-0
-  6
-CONTINUOUS
-  0
-LAYER
-  5
-57
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-Battery
- 70
-0
-  6
-CONTINUOUS
-  0
-LAYER
-  5
-58
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-LeoStick
- 70
-0
-  6
-CONTINUOUS
-  0
-LAYER
-  5
-59
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-Additional_Text
- 70
-0
-  6
-CONTINUOUS
-  0
-LAYER
-  5
-5a
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-spare
  70
 0
   6
