@@ -7,7 +7,9 @@
 * Updated firmata to use new proximity firmata in line with J5
 * updated examples to use new `Proximity class`
 * Updated pixel for SBS to use new `node-pixel` version.
-
+* Added firmware for ESP8266 transparent bridge
+* Added example for network simplebot 
+* Added `network_simplebot_firmata`
 
 ## 0.3.2
 

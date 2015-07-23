@@ -23,12 +23,21 @@ module.exports = function(grunt) {
                 expand: true,
                 filter: 'isFile',
             },
+            network_simplebot_firmata: {
+                cwd: 'firmware/src/',
+                flatten: true,
+                src: [ 'libs/firmata/**', 'controller_src/network_simplebot_firmata/*' ],
+                dest: 'firmware/build/network_simplebot_firmata/',
+                expand: true,
+                filter: 'isFile',
+            },
         },
         clean: {
             build: {
                 src: [  
                         'firmware/build/simplebot_firmata',
                         'firmware/build/sbs_firmata',
+                        'firmware/build/network_simplebot_firmata',
                      ]
             },
         },
