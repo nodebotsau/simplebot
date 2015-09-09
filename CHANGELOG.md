@@ -1,5 +1,15 @@
 # SimpleBot project changelog
 
+## 0.5
+
+* Removed some old cruft floating around
+* Fixed dependencies to now build from node-pixel source rather than a lock copy
+* Updated avoidance example to use Proximity class
+* Fixed documentation to be up to date, link to build video and point to the 
+current serial bridge implementation for WiFi.
+* Fixed `simplebot.js` code to be in line with the circuit diagram
+* Broke out controller to be more reusable
+
 ## 0.4
 
 * Updated all packages to latest versions
