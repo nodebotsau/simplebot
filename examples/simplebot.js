@@ -6,7 +6,7 @@
 var five = require("johnny-five");
 var keypress = require('keypress');
 
-var RSTOPVAL = 93;
+var RSTOPVAL = 90;
 var LSTOPVAL = 90;
 
 var opts = {};
