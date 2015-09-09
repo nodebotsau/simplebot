@@ -3,10 +3,7 @@
 //
 // =======================
 var five = require("johnny-five");
-
-var simplebot = require('./simplebot');
-var left_wheel  = new five.Servo({ pin:  9, type: 'continuous' }).to(simplebot.LSTOPVAL);
-var right_wheel = new five.Servo({ pin: 10, type: 'continuous' }).to(simplebot.RSTOPVAL);
+var Controller = require("../lib/kb_controller.js");
 
 var opts = {};
 var board = new five.Board(opts);
@@ -15,27 +12,34 @@ var range = 10 // distance in cms
 
 board.on("ready", function() {
 
-  // Create new Ping and use to avoid collisions.
-  // Simple directional decisions can be created
-  // to turn the bot autonomously
+    var left_wheel = new five.Servo.Continuous(9);
+    var right_wheel = new five.Servo.Continuous(8);
 
-  var ping = new five.Ping({
-      pin: 7,
-      freq: 100,
-      controller: "HCSR04",
-  });
+    var controller = new Controller({
+        left: left_wheel,
+        right: right_wheel,
+        lstop: 90, // use these to set the stop value of the servo
+        rstop: 90,
+    });
 
-  console.log('Initialising Range Finder');
+    // Create new Ping and use to avoid collisions.
 
-  ping.on("change", function( err, value ) {
+    console.log('Initialising Range Finder');
+    var ping = new five.Proximity({
+        pin: 7,
+        freq: 200,
+        controller: "HCSR04"
+    });
 
-    if (this.cm < range) {
-      console.log('WARNING: Collision avoidance activated at: ' + this.cm + ' cm');
-      left_wheel.to(LSTOPVAL);
-      right_wheel.to(RSTOPVAL);
-    }
+    ping.on("change", function( err, value ) {
 
-  });
+        if (this.cm < range) {
+            console.log('WARNING: Collision avoidance activated at: ' + this.cm + ' cm');
+            left_wheel.to(controller.LSTOPVAL);
+            right_wheel.to(controller.RSTOPVAL);
+        }
+
+    });
 });
 
 board.on("error", function(err) {
