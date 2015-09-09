@@ -1,6 +1,6 @@
 {
   "name": "simplebot",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "A simple robotics platform designed to be used and built on a NodeBots Day event",
   "main": "examples/simplebot.js",
   "scripts": {
