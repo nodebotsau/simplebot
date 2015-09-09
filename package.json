@@ -12,6 +12,8 @@
   },
   "keywords": [
     "nodebots",
+    "johnny-five",
+    "simplebot",
     "robots"
   ],
   "author": "Andrew Fisher",
@@ -22,8 +24,9 @@
   "dependencies": {
     "color-string": "^0.3.0",
     "es6-collections": "^0.5.2",
-    "johnny-five": "^0.8.85",
+    "johnny-five": "^0.8.91",
     "keypress": "^0.2.1",
+    "node-pixel": "^0.4.1",
     "temporal": "^0.4.0",
     "udp-serial": "^0.1.2"
   },

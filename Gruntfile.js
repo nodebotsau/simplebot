@@ -16,9 +16,13 @@ module.exports = function(grunt) {
                 filter: 'isFile',
             },
             sbs_firmata: {
-                cwd: 'firmware/src/',
+                cwd: './',
                 flatten: true,
-                src: [ 'libs/**', 'controller_src/sbs_firmata/*' ],
+                src: [  'firmware/src/libs/firmata/**',
+                        'firmware/src/controller_src/sbs_firmata/*', 
+                        'node_modules/node-pixel/firmware/src/libs/neopixel/*',
+                        'node_modules/node-pixel/firmware/src/libs/ws2812/*'
+                ],
                 dest: 'firmware/build/sbs_firmata/',
                 expand: true,
                 filter: 'isFile',
