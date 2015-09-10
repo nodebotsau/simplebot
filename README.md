@@ -1,4 +1,6 @@
-# SimpleBot.
+# SimpleBot
+
+![A simplebot battle royale at NodeBots Day](docs/img/simplebot_battle.jpg)
 
 ## Overview
 
@@ -76,9 +78,9 @@ intro](http://johnny-five.io/platform-support/) for a good getting started guide
 ## Install drivers
 
 If you're using an arduino provided to you at a NodeBots event, you will probably
-need to install a driver to make it work. They are in the [/drivers](drivers folder)
-in the repo and there's a [/drivers/CH341SER.EXE](windows version) and a 
-[/drivers/ch341ser_mac.zip](mac version). Just download and follow the installation
+need to install a driver to make it work. They are in the [drivers folder](/drivers)
+in the repo and there's a [windows version](/drivers/CH341SER.EXE) and a 
+[mac version](/drivers/ch341ser_mac.zip). Just download and follow the installation
 prompts.
 
 ## Flashing the arduino
@@ -113,6 +115,28 @@ Breadboard:
 ![SimpleBot Breadboard diagram](examples/wiring/basic_wiring_bb.png)
 
 # Examples
+
+## A simple drive example
+
+In the `examples` folder you can see an example called `simplebot.js`. This is
+a very simple control example which uses the arrow and space keys on the keyboard
+to drive the SimpleBot around. 
+
+Simply run:
+
+```shell
+node examples/simplebot.js SERIAL_DEVICE
+```
+
+Where `SERIAL_DEVICE` is the path to the serial port (eg `/dev/tty/USB0`).
+
+You should now be able to drive your robot around happily.
+
+### Tuning your servos
+
+If your servos don't entirely stop then tune the stop value in the code by
+setting a LSTOP and RSTOP value that is a little either side of 90 (this is 
+because CR servos are a hack and may need some tuning).
 
 ## Driving over Bluetooth
 

@@ -8,7 +8,7 @@
 * Fixed documentation to be up to date, link to build video and point to the 
 current serial bridge implementation for WiFi.
 * Fixed `simplebot.js` code to be in line with the circuit diagram
-* Broke out controller to be more reusable
+* Broke out controller to be more reusable and updated examples with it.
 
 ## 0.4
 
