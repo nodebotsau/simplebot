@@ -1,6 +1,6 @@
 # SimpleBot
 
-![A simplebot battle royale at NodeBots Day](docs/img/simplebot_battle.jpg)
+![SimpleBot](docs/img/simplebot_basic.jpg)
 
 ## Overview
 
@@ -130,7 +130,10 @@ node examples/simplebot.js SERIAL_DEVICE
 
 Where `SERIAL_DEVICE` is the path to the serial port (eg `/dev/tty/USB0`).
 
-You should now be able to drive your robot around happily.
+You should now be able to drive your robot around happily. Go get a few friends
+to build one too and you can have Sumo Battles.
+
+![A simplebot battle royale at NodeBots Day](docs/img/simplebot_battle.jpg)
 
 ### Tuning your servos
 
