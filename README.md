@@ -143,9 +143,62 @@ because CR servos are a hack and may need some tuning).
 
 ## Driving over Bluetooth
 
-You can use bluetooth to drive the simplebot. Get a bluetooth module and 
-configure it per [this wiki entry in J5](https://github.com/rwaldron/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes). 
-This is a mandatory.
+You can use bluetooth to drive the simplebot. 
+
+Get a bluetooth module and configure it. This is a mandatory step before you can
+do it properly..
+
+There are two options:
+
+### Option 1 - use arduino sketch
+
+Per [this wiki entry in J5](https://github.com/rwaldron/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes) 
+
+### Option 2 - use a serial terminal.
+
+Simply connect using a serial terminal. The default will be no line endings,
+and probably 9600 BAUD. You can use minicom, screen or the arduino serial monitor
+for this easily.
+
+You should be able to type (without hitting enter or anything)
+
+```
+AT
+```
+
+And get an `Ok` response. If you do, carry on, if not, systematically go through
+each baud level until you get the right one.
+
+Now execute the following commands:
+
+```
+AT+PINxxxx
+```
+
+Where `xxxx` is a 4 digit number - hint try not to use 0000 or 1234 or you might
+find people driving your robot in a battle.
+
+```
+AT+NAMEyyyyyyy
+```
+
+Where `yyyyyyy` is an up to 20 character string (no spaces) for a name. Hint - try
+something you'll know not just "Robot".
+
+```
+AT+BAUD7
+```
+
+This will update the baudrate to 57600 which means you don't need to change
+your arduino sketch.
+
+### Wiring for BT.
+
+Connect the BT Module TX pin to the Arduino RX pin and the BT Module RX pin to 
+the Arduino TX pin and you should be ready to go. Note that if you need to
+flash the arduino or anything you need to unplug the BT module.
+
+### Connecting
 
 Once you've got your bluetooth set up, pair it with your computer so it appears 
 as a serial device.
