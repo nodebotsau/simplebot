@@ -1,11 +1,21 @@
 # SimpleBot project changelog
 
+## 0.6
+
+* Updated dependecies for all packages
+* Updated firmata to 2.5.1
+* Simplified build process touse same core firmata and update relevant parts
+for those targets that need it.
+* Deploy bins for uno and nano for the firmware
+* Added documentation for the different styles
+* Updated readme docs generally.
+
 ## 0.5
 
 * Removed some old cruft floating around
 * Fixed dependencies to now build from node-pixel source rather than a lock copy
 * Updated avoidance example to use Proximity class
-* Fixed documentation to be up to date, link to build video and point to the 
+* Fixed documentation to be up to date, link to build video and point to the
 current serial bridge implementation for WiFi.
 * Fixed `simplebot.js` code to be in line with the circuit diagram
 * Broke out controller to be more reusable and updated examples with it.
@@ -18,7 +28,7 @@ current serial bridge implementation for WiFi.
 * updated examples to use new `Proximity class`
 * Updated pixel for SBS to use new `node-pixel` version.
 * Added firmware for ESP8266 transparent bridge
-* Added example for network simplebot 
+* Added example for network simplebot
 * Added `network_simplebot_firmata`
 
 ## 0.3.2
@@ -45,7 +55,7 @@ modifications to it as well as wrapped previous work from RGBLED to use NeoPixel
 ### Contributor acknowledgments:
 
 * [Alec Clews](https://github.com/alecthegeek) - Rasbian install scripts for RPi (https://github.com/alecthegeek/CCHS_Raspian_for_IoT)
-* [Andy Gelme](https://github.com/geekscape) - Continued testing, design advice, 
+* [Andy Gelme](https://github.com/geekscape) - Continued testing, design advice,
 * [Angus Gratton](https://github.com/projectgus) - SimpleBot Shield design and bumper design mods
 * [Kym McInerney](https://github.com/holodigm) - collision avoidance example
 * [Rick Waldron](https://github.com/rwaldron) - Pixel API suggestions and deep firmata architecture discussion
