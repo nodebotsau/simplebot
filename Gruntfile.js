@@ -1,3 +1,19 @@
+var arduino = process.env.ARDUINO_PATH;
+
+// these are the main target boards for the SimpleBot.
+var boards = {
+    "uno" :{
+        package: "arduino:avr:uno",
+    },
+    "nano": {
+        cpu: "atmega328",
+        package: "arduino:avr:nano:cpu=atmega328",
+    },
+};
+
+// use this so we can expand it later.
+var boardlist = Object.keys(boards).toString();
+
 module.exports = function(grunt) {
 
     // configure the tasks
@@ -14,6 +30,12 @@ module.exports = function(grunt) {
                 src: [
                         'firmware/bin/*'
                     ]
+            },
+            post_compile: {
+                src: [
+                        'firmware/bin/standard/{' + boardlist + '}/!(*ino.hex)',
+						'firmware/bin/network/{' + boardlist + '}/!(*ino.hex)',
+                ]
             },
         },
         copy: {
@@ -70,7 +92,29 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-string-replace');
+    grunt.loadNpmTasks('grunt-exec');
+
+    // build the bins for the target
+    // dynamically create the compile targets for the various boards
+    Object.keys(boards).forEach(function(board) {
+        var cwd = 'firmware/build/';
+
+        grunt.config(["exec", board + "_standard"], {
+            command:function() {
+                return arduino + " --verify --verbose-build --board "  + boards[board].package +
+                " --pref build.path=firmware/bin/standard/" + board +  " " + cwd +
+                "standard/simplebot_firmata/simplebot_firmata.ino";
+            },
+        });
+        grunt.config(["exec", board + "_network"], {
+            command:function() {
+                return arduino + " --verify --verbose-build --board "  + boards[board].package +
+                " --pref build.path=firmware/bin/network/" + board +  " " + cwd +
+                "network/simplebot_firmata/simplebot_firmata.ino";
+            },
+        });
+    });
 
     grunt.registerTask('build', ['clean:firmware_build', 'clean:compiled_bins', 'copy', 'string-replace']);
-
+    grunt.registerTask('compile', ['build', 'exec', 'clean:post_compile']);
 };
