@@ -26,7 +26,7 @@ board.on("ready", function() {
 
     console.log('Initialising Range Finder');
     var ping = new five.Proximity({
-        pin: 7,
+        pin: 10,
         freq: 200,
         controller: "HCSR04"
     });

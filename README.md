@@ -53,16 +53,14 @@ The following are the various components you need to get hold of to make a basic
 SimpleBot. If you're making this at a NodeBots event you'll have a set of
 components in your kits.
 
-|  # | Component                  | Notes                                                                                   |
-|:--:|----------------------------|-----------------------------------------------------------------------------------------|
-|  1 | Arduino                    | We use Nanos because they are small and inexpensive (and light) but any arduino will do |
-| 10 | M-M Jumper wires           | The more the better but 10 will be enough to build with                                 |
-|  2 | Continuous rotation Servos | Make sure the servo can turn 360˙                                                       |
-|  1 | 4xAA square battery pack   | Square ones are better as they are more compact                                         |
-| 4  | AA Batteries               | Go rechargeable and help the environment                                                |
-| 1  | Mini breadboard            | Smaller is better                                                                       |
-| 10 | Cable ties                 | 3-4mm wide and about 100-200mm long is a good size to work with. The more the better    |
-| 1  | Ultrasonic range finder    | We use the HC-SR04 because it's cheap and easily obtained but any should work           |
+|  # | Component        | Notes                                                                                   |
+|:--:|------------------|-----------------------------------------------------------------------------------------|
+|  1 | Arduino          | We use Nanos because they are small and inexpensive (and light) but any arduino will do |
+| 10 | M-M Jumper wires | The more the better but 10 will be enough to build with                                 |
+|  2 | DC Motors        | These are common - get ones with wheels & gears                                         |
+|  1 | Battery pack     | LiPo or 4xAA - about 5V is what you're afer                                             |
+|  1 | Mini breadboard  | Smaller is better                                                                       |
+| 10 | Cable ties       | 3-4mm wide and about 100-200mm long is a good size to work with. The more the better    |
 
 Other things you might want to add to your bot:
 
@@ -71,7 +69,9 @@ Other things you might want to add to your bot:
 * Spikes to take out others; Ben Hur or Mad Max style.
 * USB WebCam if you want to give your bot some vision.
 * USB cable extender if you want some range.
-* Bluetooth or wireless modules to remove the usb.
+* Bluetooth or wireless modules to remove the USB cable.
+* An Ultrasonic sensor to do obstacle detection
+* Reflectance sensors to do line following
 
 # SETUP
 
@@ -99,14 +99,12 @@ npm install
 
 ## Flashing the arduino
 
-Load up the `firmware/build/standard/simplebot_firmata` [sketch](/firmware/build/simplebot_firmata/).
-
 Use `interchange` to install the firmware to the arduino. Plug the arduino in
 and then call the following instruction (this assumes you have `./node_modules/.bin/`
 on your `$PATH`.
 
 ```
-interchange install StandardFirmata -a nano
+interchange install hc-sr04 -a nano --firmata
 ```
 
 Assuming you get no errors, you're good to go on that front.
@@ -141,42 +139,39 @@ The wiring diagrams are provided here:
 
 Schematic:
 
-![SimpleBot schematic](examples/wiring/basic_wiring_schematic.png)
+![SimpleBot schematic](docs/images/motor_no_bt_schem.png)
 
-Breadboard:
-
-![SimpleBot Breadboard diagram](examples/wiring/basic_wiring_bb.png)
 
 # Examples
 
 ## A simple drive example
 
-In the `examples` folder you can see an example called `simplebot-motors.js` or
-`simplebot-servos.js` - choose the version depending on your motor types. This is
+In the `examples` folder you can see an example called `motors.js` or
+`servos.js` - choose the version depending on your motor types. This is
 a very simple control example which uses the arrow and space keys on the keyboard
 to drive the SimpleBot around.
 
 Simply run:
 
 ```shell
-node examples/simplebot-motors.js SERIAL_DEVICE
+node examples/motors.js SERIAL_DEVICE
 ```
 
 ```shell
-node examples/simplebot-servos.js SERIAL_DEVICE
+node examples/servos.js SERIAL_DEVICE
 ```
 
 Where `SERIAL_DEVICE` is the path to the serial port (eg `/dev/tty/USB0`).
 
 You should now be able to drive your robot around happily. Go get a few friends
-to build one too and you can have Sumo Battles.
+to build one too and you can have SumoBot Battles.
 
 ![A simplebot battle royale at NodeBots Day](docs/img/simplebot_battle.jpg)
 
 
 ### Tuning servos
 
-If your servos don't entirely stop then tune the stop value in the code by
+If you are using servos and they don't entirely stop then tune the stop value in the code by
 setting a LSTOP and RSTOP value that is a little either side of 90 (this is
 because CR servos are a hack and may need some tuning).
 
@@ -203,11 +198,12 @@ as a serial device.
 Simply go:
 
 ```
-node examples/simplebot-motors.js /dev/tty.SERIALPORT
+node examples/motors.js /dev/tty.SERIALPORT
 ```
 
-Changing the device path to whatever yours is. You should now be able to drive
-using wireless over bluetooth just the same as using a USB cable.
+Changing the device path to whatever yours is to the Bluetooth Module. You
+should now be able to drive using wireless over bluetooth just the same as
+using a USB cable.
 
 ## Driving using wifi
 

@@ -14,8 +14,7 @@ have a robot you can control with a keyboard to drive around.
 
 The diagram below shows the electronics schematic for a basic set up.
 
-// put in diagram
-
+![](images/line_follower_schem.png)
 
 ## Physical modifications
 
@@ -26,7 +25,7 @@ can then tell when you are drifting off.
 
 ## Calibrating your sensors
 
-Once you have the sensors wired up run `examples/calibrate-linefollower.js` and
+Once you have the sensors wired up run `examples/calibrate-line.js` and
 then slowly turn your bot back and forth over the line in order to get a sense
 of what the minimum and maximum numbers it's seeing.
 

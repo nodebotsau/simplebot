@@ -7,7 +7,7 @@ think about when building your robot.
 
 The diagram below shows the electronics schematic for a basic set up.
 
-![Full schematic](images/full_bot_schem.png)
+![Full schematic](images/motor_with_bt_schem.png)
 
 If you do this however, once you move to bluetooth you may run into power
 issues where the arduino resets on you. This will be particularly noticeable
