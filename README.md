@@ -84,8 +84,10 @@ intro](http://johnny-five.io/platform-support/) for a good getting started guide
 If you're using an arduino provided to you at a NodeBots event, you will probably
 need to install a driver to make it work. They are in the [drivers folder](/drivers)
 in the repo and there's a [windows version](/drivers/CH341SER.EXE) and a
-[mac version](/drivers/ch341ser_mac.zip). Just download and follow the installation
-prompts.
+[mac version](/drivers/ch340-mac-driver.zip). Just download and follow the installation
+prompts. (If you get prompted to open the codebender site, just skip past. As
+an aside - codebender is a cool project allowing you to program and manage
+embedded devices right from your browser. [Codebender.cc](http://codebender.cc)
 
 ## Install the code dependencies
 
