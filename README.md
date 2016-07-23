@@ -58,7 +58,7 @@ components in your kits.
 |  1 | Arduino          | We use Nanos because they are small and inexpensive (and light) but any arduino will do |
 | 10 | M-M Jumper wires | The more the better but 10 will be enough to build with                                 |
 |  2 | DC Motors        | These are common - get ones with wheels & gears                                         |
-|  1 | Battery pack     | LiPo or 4xAA - about 5V is what you're afer                                             |
+|  1 | Battery pack     | LiPo or 4xAA - about 5V is what you're after                                             |
 |  1 | Mini breadboard  | Smaller is better                                                                       |
 | 10 | Cable ties       | 3-4mm wide and about 100-200mm long is a good size to work with. The more the better    |
 
