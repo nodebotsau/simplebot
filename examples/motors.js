@@ -1,4 +1,5 @@
 var five = require("johnny-five");
+var keypress = require("keypress");
 
 var board, motor_l, motor_r;
 var servo_l, servo_r;
@@ -65,7 +66,7 @@ board.on("ready", function(err) {
 
 });
 
-stdin.on('keypress', function(chunk, key) {
+process.stdin.on('keypress', function(chunk, key) {
 	// process the keypresses
 
 	if (key && key.name == 'c') {
