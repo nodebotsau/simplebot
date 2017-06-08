@@ -53,13 +53,6 @@ board.on("ready", function() {
 
     console.log("Network ready for display. Please open http://localhost:" + display.port);
 
-    // WAIT A BIT, THEN ADD LOGGING VIA CONSOLE
-    setTimeout(() =>
-    	network.on("fire", function(node) {
-	    	console.log("Node" + node.id + " is firing.");
-	    })
-	, 3000);
-
 	// SAVE REGULARLY
 	setInterval(() =>
 		require("fs").writeFile("./neural-network.json", network.export())
