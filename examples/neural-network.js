@@ -7,9 +7,8 @@ opts.port = process.argv[2] || "";
 var board = new five.Board(opts);
 
 board.on("ready", function() {
-    var saved;
 
-    var network = new botbrain.NeuralNetwork(180);
+    var network = new botbrain.NeuralNetwork(100);
 
     // INPUTS
 
@@ -24,7 +23,7 @@ board.on("ready", function() {
     // OUTPUTS
 
     var motor_l = new five.Motor({ pins: { pwm: 6, dir: 7, }, invertPWM: true, });
-    var motor_r = new five.Motor({ pins: { pwm: 10, dir: 9, }, invertPWM: true, });
+    var motor_r = new five.Motor({ pins: { pwm: 9, dir: 8, }, invertPWM: true, });
 
     // Reactions to data can be arbitrary.
     // It doesnt matter what gets mapped to what since
