@@ -73,21 +73,10 @@ Other things you might want to add to your bot:
 * An Ultrasonic sensor to do obstacle detection
 * Reflectance sensors to do line following
 
-# SETUP
+# Installation and setup
 
-To setup your SimpleBot we're assuming you have [Arduino](http://arduino.cc) and
-[NodeJS](http://nodejs.org) installed already. Go check out the [johnny five
-intro](http://johnny-five.io/platform-support/) for a good getting started guide.
-
-## Install drivers
-
-If you're using an arduino provided to you at a NodeBots event, you will probably
-need to install a driver to make it work. They are in the [drivers folder](/drivers)
-in the repo and there's a [windows version](/drivers/CH341SER.EXE) and a
-[mac version](/drivers/ch340-mac-driver.zip). Just download and follow the installation
-prompts. (If you get prompted to open the codebender site, just skip past. As
-an aside - codebender is a cool project allowing you to program and manage
-embedded devices right from your browser. [Codebender.cc](http://codebender.cc)
+Start with the [installation process outlined here](https://github.com/nodebotsau/nbdau/blob/master/setup.md)
+if you haven't already done so.
 
 ## Install the code dependencies
 
@@ -102,8 +91,7 @@ npm install
 ## Flashing the arduino
 
 Use `interchange` to install the firmware to the arduino. Plug the arduino in
-and then call the following instruction (this assumes you have `./node_modules/.bin/`
-on your `$PATH`.
+and then run the following command from your terminal.
 
 ```
 interchange install hc-sr04 -a nano --firmata
@@ -206,12 +194,6 @@ node examples/motors.js /dev/tty.SERIALPORT
 Changing the device path to whatever yours is to the Bluetooth Module. You
 should now be able to drive using wireless over bluetooth just the same as
 using a USB cable.
-
-## Driving using wifi
-
-You can use a simple serial wifi module to make your SimpleBot work over
-wireless (increased range, but you need more power). Check
-out [this gist for more details](https://gist.github.com/ajfisher/5fe60fe7d8c49b3223f0).
 
 ## Game controller
 
