@@ -12,13 +12,11 @@
 
 const five = require("johnny-five");
 const Gamepad = require("node-gamepad");
-const gamepad = new Gamepad('snes/retrolink', { vendorID: 0x0810, productID: 0xE501 });
+const gamepad = new Gamepad('snes/retrolink', { vendorID: 0x0810, productID: 0xE501 }).connect();
 const buttons = ['up', 'down', 'left', 'right', 'x', 'y', 'a', 'b', 'l', 'r'];
 const port = process.argv[2] || "";
 
 let controller = {};
-
-gamepad.connect();
 
 buttons.forEach(btn => gamepad.on(btn + ':press', () => handle(btn, 'press')));
 buttons.forEach(btn => gamepad.on(btn + ':release', () => handle(btn, 'release')));
