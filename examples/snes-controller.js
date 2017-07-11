@@ -1,6 +1,8 @@
 // =======================
 // Build off the basic simplebot base but now with a USB SNES gamepad controller
 //
+// http://www.ebay.com.au/itm/Retro-SNES-USB-Wired-Classic-Controller-GamePad-for-Windows-PC-Color-/261348030489
+//
 // Note dependency: npm install node-gamepad
 //
 // Note also: you may need to update the 'vendorID' and 'productID' below to match your controller.
