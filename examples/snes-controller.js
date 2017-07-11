@@ -15,7 +15,6 @@ const buttons = ['up', 'down', 'left', 'right', 'x', 'y', 'a', 'b', 'l', 'r'];
 const port = process.argv[2] || "";
 
 let on = {};
-let activeButton = undefined;
 
 controller.connect();
 
@@ -26,10 +25,8 @@ function handle(button, action) {
     console.log(`${button}:${action}`);
     switch(action) {
         case 'press':
-            if (!activeButton) activeButton = button;
             return on[button] && on[button]();
         case 'release':
-            if (activeButton) activeButton = undefined;
             return on.stop && on.stop();
     }
 }
