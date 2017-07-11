@@ -12,24 +12,24 @@
 
 const five = require("johnny-five");
 const Gamepad = require("node-gamepad");
-const controller = new Gamepad('snes/retrolink', { vendorID: 0x0810, productID: 0xE501 });
+const gamepad = new Gamepad('snes/retrolink', { vendorID: 0x0810, productID: 0xE501 });
 const buttons = ['up', 'down', 'left', 'right', 'x', 'y', 'a', 'b', 'l', 'r'];
 const port = process.argv[2] || "";
 
-let on = {};
+let controller = {};
 
-controller.connect();
+gamepad.connect();
 
-buttons.forEach(btn => controller.on(btn + ':press', () => handle(btn, 'press')));
-buttons.forEach(btn => controller.on(btn + ':release', () => handle(btn, 'release')));
+buttons.forEach(btn => gamepad.on(btn + ':press', () => handle(btn, 'press')));
+buttons.forEach(btn => gamepad.on(btn + ':release', () => handle(btn, 'release')));
 
 function handle(button, action) {
     console.log(`${button}:${action}`);
     switch(action) {
         case 'press':
-            return on[button] && on[button]();
+            return controller[button] && controller[button]();
         case 'release':
-            return on.stop && on.stop();
+            return controller.stop && controller.stop();
     }
 }
 
@@ -49,29 +49,29 @@ board.on("ready", () => {
 
     let piezo = new five.Piezo(10);
 
-    on.up = () => {
+    controller.up = () => {
         motor_l.forward(250);
         motor_r.forward(250);
     };
-    on.down = () => {
+    controller.down = () => {
         motor_l.reverse(250);
         motor_r.reverse(250);
     };
-    on.left = () => {
+    controller.left = () => {
         motor_l.forward(250);
     };
-    on.right = () => {
+    controller.right = () => {
         motor_r.forward(250);
     };
-    on.l = () => {
+    controller.l = () => {
         motor_l.forward(250);
         motor_r.reverse(250);
     };
-    on.r = () => {
+    controller.r = () => {
         motor_l.reverse(250);
         motor_r.forward(250);
     };
-    on.b = () => {
+    controller.b = () => {
         piezo.play({
             // Old Macdonald
             song: "- C4 - C4 - C4 - G3 - A3 - A3 - G3 G3 - E4 - E4 - D4 - D4 - C4 C4 - - - -",
@@ -79,7 +79,7 @@ board.on("ready", () => {
             tempo: 100
         });
     };
-    on.a = () => {
+    controller.a = () => {
         piezo.play({
             // Yankee doodle
             song: "- C4 C4 D4 E4 C4 E4 D4 - G3 C4 C4 D4 E4 C4 - B3 -",
@@ -87,7 +87,7 @@ board.on("ready", () => {
             tempo: 200
         });
     };
-    on.y = () => {
+    controller.y = () => {
         piezo.play({
             // http://johnny-five.io/api/piezo/
             song: "C D F D A - A A A A G G G G - - C D F D G - G G G G F F F F - -",
@@ -95,7 +95,7 @@ board.on("ready", () => {
             tempo: 100
         });
     };
-    on.stop = () => {
+    controller.stop = () => {
         motor_l.stop();
         motor_r.stop();
         piezo.off();
