@@ -172,7 +172,7 @@ You can use bluetooth to drive the simplebot.
 Get a bluetooth module and configure it. This is a mandatory step before you can
 do it properly..
 
-Per [this wiki entry in J5](https://github.com/rwaldron/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes)
+Per [this wiki entry in J5](https://github.com/rwaldron/johnny-five/wiki/Getting-Started-with-Johnny-Five-and-JY-MCU-Bluetooth-Serial-Port-Module)
 
 ### Wiring for BT.
 
