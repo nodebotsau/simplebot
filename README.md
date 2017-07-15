@@ -83,7 +83,7 @@ if you haven't already done so.
 Clone the repo and install everything from here:
 
 ```
-git clone https://github.com/nodebotsau/simplebot
+git clone https://github.com/nodebotsau/simplebot.git
 cd simplebot
 npm install
 ```
