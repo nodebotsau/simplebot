@@ -116,6 +116,8 @@ If it all goes well. You'll see a blinking LED positioned next to the L on your 
 [*] L     <--- this light will start flashing
 ```
 
+![docs/img/blink.jpg](docs/img/blink.jpg)
+
 ## Build a SimpleBot
 
 You can go in a few different directions with the SimpleBot. Details for the
