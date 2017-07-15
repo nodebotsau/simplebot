@@ -112,7 +112,7 @@ If it all goes well. You'll see a blinking LED positioned next to the L on your 
 ```
 [ ] RX
 [ ] TX
-[*] POW   <--- this light should be on already
+[*] POW 
 [*] L     <--- this light will start flashing
 ```
 
