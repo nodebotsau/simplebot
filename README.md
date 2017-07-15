@@ -99,6 +99,23 @@ interchange install hc-sr04 -a nano --firmata
 
 Assuming you get no errors, you're good to go on that front.
 
+## Run a basic blink program
+
+Next, to test you've got Firmata running, run a basic blink program with the following command: 
+
+```
+node examples/blink.js
+```
+
+If it all goes well. You'll see a blinking LED positioned next to the L on your arduino.
+
+```
+[ ] RX
+[ ] TX
+[*] POW   <--- this light should be on already
+[*] L     <--- this light will start flashing
+```
+
 ## Build a SimpleBot
 
 You can go in a few different directions with the SimpleBot. Details for the
