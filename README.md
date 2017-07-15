@@ -118,6 +118,17 @@ If it all goes well. You'll see a blinking LED positioned next to the L on your 
 
 ![docs/img/blink.jpg](docs/img/blink.jpg)
 
+Open the [`examples/blink.js`](examples/blink.js) program in an editor and look at the code. Its currently set to blink every 500ms. 
+
+Try changing this to 100ms and see if it blinks faster now.
+
+```js
+board.on("ready", function() {
+  var led = new five.Led(13);
+  led.blink(500);  //  <--- try changing this value see if it blinks faster/slower
+});
+```
+
 ## Build a SimpleBot
 
 You can go in a few different directions with the SimpleBot. Details for the
