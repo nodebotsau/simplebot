@@ -14,7 +14,8 @@ have a robot you can control with a keyboard to drive around.
 
 The diagram below shows the electronics schematic for a basic set up.
 
-// PUT IN DIAGRAM
+
+![](images/avoidance_schem.png)
 
 Note that the echo and trigger pins on the sensor are wired to the same pin
 as the arduino can use both.
