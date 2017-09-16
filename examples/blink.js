@@ -6,7 +6,7 @@
 //
 
 var five = require("johnny-five");
-var board = new five.Board();
+var board = new five.Board({port: process.argv[2]});
 
 board.on("ready", function() {
   var led = new five.Led(13);
