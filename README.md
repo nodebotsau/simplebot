@@ -83,7 +83,7 @@ if you haven't already done so.
 Clone the repo and install everything from here:
 
 ```
-git clone https://github.com/nodebotsau/simplebot
+git clone https://github.com/nodebotsau/simplebot.git
 cd simplebot
 npm install
 ```
@@ -98,6 +98,36 @@ interchange install hc-sr04 -a nano --firmata
 ```
 
 Assuming you get no errors, you're good to go on that front.
+
+## Run a basic blink program
+
+Next, to test you've got Firmata running, run a basic blink program with the following command: 
+
+```
+node examples/blink.js
+```
+
+If it all goes well. You'll see a blinking LED positioned next to the L on your arduino.
+
+```
+[ ] RX
+[ ] TX
+[*] POW 
+[*] L     <--- this light will start flashing
+```
+
+![docs/img/blink.jpg](docs/img/blink.jpg)
+
+Open the [`examples/blink.js`](examples/blink.js) program in an editor and look at the code. Its currently set to blink every 500ms. 
+
+Try changing this to 100ms and see if it blinks faster now.
+
+```js
+board.on("ready", function() {
+  var led = new five.Led(13);
+  led.blink(500);  //  <--- try changing this value see if it blinks faster/slower
+});
+```
 
 ## Build a SimpleBot
 
@@ -172,7 +202,7 @@ You can use bluetooth to drive the simplebot.
 Get a bluetooth module and configure it. This is a mandatory step before you can
 do it properly..
 
-Per [this wiki entry in J5](https://github.com/rwaldron/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes)
+Per [this wiki entry in J5](https://github.com/rwaldron/johnny-five/wiki/Getting-Started-with-Johnny-Five-and-JY-MCU-Bluetooth-Serial-Port-Module)
 
 ### Wiring for BT.
 

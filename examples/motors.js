@@ -50,8 +50,13 @@ board.on("ready", function(err) {
 });
 
 process.stdin.on('keypress', function(chunk, key) {
-    // process the keypresses
 
+    // is board ready?
+    if (!board.repl.ready) {
+        return;
+    }
+
+    // process the keypresses
     if (key) {
         switch (key.name) {
             case "left":
