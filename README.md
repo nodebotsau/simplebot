@@ -1,5 +1,7 @@
 # SimpleBot
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nodebotsau/simplebot.svg)](https://greenkeeper.io/)
+
 ![SimpleBot](docs/img/simplebot_basic.jpg)
 
 ## Overview
