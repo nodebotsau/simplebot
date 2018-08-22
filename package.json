@@ -24,7 +24,7 @@
   "dependencies": {
     "color-string": "^1.2.0",
     "es6-collections": "^0.5.2",
-    "johnny-five": "^0.15.0",
+    "johnny-five": "^1.0.0",
     "keypress": "^0.2.1",
     "temporal": "^0.7.0"
   },
